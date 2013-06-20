@@ -1,0 +1,436 @@
+@charset "utf-8";
+
+/*====================NORMALIZE=============================*/
+body, h1, h2, h3, h4, h5, h6, ul, li, em, strong, pre, code{
+padding: 0; 
+margin: 0; 
+line-height: 1.5em;
+font-size: 100%;
+font-weight: normal;
+font-style: normal;
+}
+table {
+font-size: inherit;
+font: 100%;
+}
+ul {
+list-style: none;
+}
+img, fieldset {
+border: 0;
+}
+p {
+margin: 0 auto 1em;
+}
+input, button, select, textarea, fieldset{
+font: inherit;
+color: inherit;
+margin: 0;
+padding: 0;
+}
+/*====================END NORMALIZE=============================*/
+
+
+
+
+body {
+	font-family: Roboto Regular, tahoma, arial, helvetica, sans-serif;
+}
+
+@font-face {
+	font-family: 'Comic Zine';
+	src: url('fonts/comic_zine_ot-webfont.eot');
+	src: local('Comic Zine OT'),
+		local('Comic Zine'),
+		url('fonts/comic_zine_ot-webfont.ttf') format('truetype'),
+		url('fonts/comic_zine_ot-webfont.svg#font') format('svg');
+}
+
+@font-face {
+	font-family: 'Grand Hotel';
+	src: url('fonts/GrandHotel-Regular-webfont.eot');
+	src: local('Grand Hotel'),
+		local('GrandHotel'),
+		url('fonts/GrandHotel-Regular-webfont.ttf') format('truetype'),
+		url('fonts/GrandHotel-Regular-webfont.svg#font') format('svg');
+}
+
+@font-face {
+	font-family: 'Ostrich Regular';
+	src: url('fonts/ostrich-regular-webfont.eot');
+	src: local('Ostrich Regular'),
+		url('fonts/ostrich-regular-webfont.ttf') format('truetype'),
+		url('fonts/ostrich-regular-webfont.svg#font') format('svg');
+}
+
+@font-face {
+	font-family: 'Ostrich Black';
+	src: url('fonts/ostrich-black-webfont.eot');
+	src: local('Ostrich Black'),
+		url('fonts/ostrich-black-webfont.ttf') format('truetype'),
+		url('fonts/ostrich-black-webfont.svg#font') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('fonts/roboto-regular-webfont.eot');
+    src: local('Roboto Regular'),
+         local('Roboto'), 
+         url('fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('fontsroboto-regular-webfont.svg#font') format('svg'); 
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('fonts/roboto-bold-webfont.eot');
+    src: local('Roboto Bold'), 
+         url('fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('fontsroboto-bold-webfont.svg#font') format('svg'); 
+}
+
+h1{
+	text-transform: uppercase;
+	font-family: Ostrich Black;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+p.logout{
+	font-size: 14px;
+	float: right;
+	margin-top: 5px;
+}
+
+p.logout a:link{
+	font-size: 14px;
+	font-family: Roboto Regular;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+a:link {
+}
+
+a:visited {
+	color: #000;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:active {
+	text-decoration:underline;
+}
+
+p a:link {
+	color: #0085B2;
+	font-family: Grand Hotel;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+p a:visited {
+	color: #0085B2;
+}
+
+.clear{
+	clear: both;
+}
+
+.productTitle{
+	text-transform: uppercase;
+	font-family: Ostrich Black;
+	font-size: 20px;
+}
+
+#container{
+	margin: 0 auto;
+	width: 800px;
+	background-color: #fff;
+}
+
+#header{
+	padding-top: 100px;
+	border-bottom: 1px #000 solid;
+	font-family: Ostrich Black;
+	font-size: 35px;
+}
+
+#logo{
+	height: 80px;
+	margin-bottom: 20px;
+	font-size: 100px;
+	display: block;
+	background-image: url("images/logo.jpg");
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	font-size: 0px;
+}
+
+#header li{
+	float: left;
+}
+
+#header li a{
+	display: block;
+}
+
+#header #productNav{
+	float: left;
+	text-transform: uppercase;
+}
+
+#header #productNav li {
+	margin-right: 50px;
+}
+
+#header #userNav{
+	float: right;
+}
+
+#header #userNav li {
+	margin-left: 50px;
+}
+
+#content{
+	clear: both;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.productImage{
+	height: auto;
+	width: 150px;
+}
+
+#content ul#catalogue li{
+	float:left;
+	margin-right: 25px;
+	margin-left: 25px;
+	width: 150px;
+}
+
+#footer{
+	border-top: 1px #000 solid;
+	clear: both;
+	font-family: Roboto Bold;
+	line-height: 25px;
+	position: fixed;
+	bottom: 0px;
+	left: 50% - 400px;
+	width: 800px;
+	background-color: #fff;
+	padding-bottom: 20px;
+}
+
+#footer ul#userNav li{
+	margin-right: 35px;
+	float: left;
+}
+
+#footer div#icons{
+	float: right;
+}
+
+#footer div#icons a{
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	float: left;
+}
+
+#fb{
+	font-size: 0px;
+	background-image: url("images/fb.jpg");
+	background-size: 25px 25px;
+}
+
+#twitter{
+	font-size: 0px;
+	background-image: url("images/twitter.jpg");
+	width: 25px;
+	height: 25px;
+	background-size: 25px 25px;
+}
+
+
+
+div.productdetails img{
+	float: left;
+	margin-right: 50px;
+}
+
+div.productdetails div{
+	float: left;
+	width: 200px;
+	padding-top: 50px;
+}
+
+div.categorystyle{
+	margin-left: 15px;
+}
+
+ul.details{
+	margin-bottom: 50px;
+}
+
+
+/* REGISTER FORM */
+
+label{
+	width: 200px;
+	float: left;
+	clear: both;
+}
+
+input{
+	width: 200px;
+	float: left;
+}
+
+input[type=submit]{
+	clear: both;
+	margin-left: 200px;
+	width: 205px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	border: 0px;
+	background-color: #0085B2;
+	color: #fff;
+	opacity: 0.7;
+	text-transform: uppercase;
+	font-family: Roboto Bold;
+	line-height: 29px;
+	height: 25px;
+}
+
+label, input, textarea, div.error{
+	margin-top: 7px;
+}
+
+textarea{
+	width: 202px;
+	max-width: 202px;
+	height: 50px;
+	max-height: 50px;
+	float: left;
+}
+
+div.error{
+	float:left;
+}
+
+.error{
+	color: red;
+	font-size: 0.8em;
+}
+
+/* CENTERED PAGES */
+
+.center{
+	margin-left: 200px;
+}
+
+.center img{
+	height: 279px;
+	width: auto;
+}
+
+/* HOME PAGE */
+
+div#aboutUs{
+	position: relative;
+}
+
+div#aboutUs p{
+	position: absolute;
+	top: 400px;
+	left: 50px;
+	color: #fff;
+	width: 700px;
+	font-size: 16px;
+}
+
+div#aboutUs img{
+	float: right;
+	width: 800px;
+}
+
+/* MY DETAILS PAGE */
+
+ul li span.label{
+	width: 200px;
+	display: inline-block;
+}
+
+ul li span.detail{
+	color: #0085B2;
+}
+
+/* cart styling */
+
+#ordercontainer{
+	width: 600px;
+	margin: auto;
+}
+
+#order{
+	border: 1px black solid;
+	padding: 15px;
+}
+
+ul li span.cartproduct{
+	float:left;
+	clear: both;
+	width: 150px;
+}
+
+ul li span.product_qty{
+	margin-left: 30px;
+	float: left;
+	width: 30px;
+}
+
+ul li span.product_price{
+	float: right;
+	margin-left: 30px;
+	width: 110px;
+}
+
+ul li span.product_price span.product_price_number{
+	float: right;
+}
+
+hr{
+	clear: both;
+}
+
+#totalprice{
+	float: right;
+	text-align: right;
+}
+
+#cartlist li a{
+	float: left;
+	margin-left: 8px;
+	color: #0085B2;
+	font-size: 13px;
+}
+
+p#totalprice{
+	clear: both;
+}
+
+div#ordercomments label{
+	width: 100%;
+}
+
+div#ordercomments textarea{
+	width: 270px;
+	max-width: 270px;
+}
