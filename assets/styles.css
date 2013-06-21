@@ -434,3 +434,10 @@ div#ordercomments textarea{
 	width: 270px;
 	max-width: 270px;
 }
+
+span.empty{
+	color: #0085B2;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}

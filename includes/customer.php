@@ -105,6 +105,7 @@
 			switch($sProperty){
 				case "ID":
 					return $this->iCustomerID;
+					break;
 				case "firstname":
 					return $this->sFirstName;
 					break;

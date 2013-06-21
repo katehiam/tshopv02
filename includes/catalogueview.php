@@ -15,7 +15,11 @@ class CatalogueView{
 					<h2 class="productTitle">'.$oCurrentProduct->name.'</h2></a>
 					<p>$'.number_format($oCurrentProduct->price,2).'</p>
 					<p>';
-			$sHTML .= '<a href="add.php?ID='.$oCurrentProduct->ID.'">add to cart</a>';
+			if(isset($_SESSION["currentUser"])){
+				$sHTML .= '<a href="add.php?ID='.$oCurrentProduct->ID.'">add to cart</a>';
+			}else{
+				$sHTML .= '<a href="login.php">add to cart</a>';
+			}
 			$sHTML .= '</p>
 				</div>
 			</li>';

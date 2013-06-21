@@ -13,6 +13,9 @@ class CartView{
 	<h2>Order Summary</h2>
 	<hr />
 	<ul id="cartlist">';
+		if(count($oCart->contents) == 0){
+			$sHTML .= '<span class="empty">Your cart is empty</span>';
+		}
 		foreach($oCart->contents as $key => $value){
 			$oProduct = new Product();
 			$oProduct->load($key);

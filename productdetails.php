@@ -16,6 +16,7 @@
 		<?php
 		// writes the code to display product details
 		echo $oPV->render($oProduct);
+		echo $oForm->html;
 		?>
 	</div>
 

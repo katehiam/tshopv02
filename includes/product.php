@@ -11,7 +11,6 @@ class Product{
 	private $sDescription;
 	private $sProductName;
 	private $iActive;
-	private $sColours;
 	private $sSizing;
 	private $iDisplayOrder;
 
@@ -24,7 +23,6 @@ class Product{
 		$this->sDescription = "";
 		$this->sProductName = "";
 		$this->iActive = 0;
-		$this->sColours = "";
 		$this->sSizing = "";
 		$this->iDisplayOrder = 0;
 	}
@@ -34,7 +32,7 @@ class Product{
 	public function load($iProductID){
 		$oDatabase = new Database();
 
-		$sSQL = "SELECT productid, producttypeid, price, stocklevel, photo, description, productname, active, colours, sizing, displayorder
+		$sSQL = "SELECT productid, producttypeid, price, stocklevel, photo, description, productname, active, sizing, displayorder
 				FROM tbproduct
 				WHERE productid = ".$oDatabase->escape_value($iProductID);
 
@@ -50,12 +48,36 @@ class Product{
 		$this->sDescription = $aProduct["description"];
 		$this->sProductName = $aProduct["productname"];
 		$this->iActive = $aProduct["active"];
-		$this->sColours = $aProduct["colours"];
 		$this->sSizing = $aProduct["sizing"];
 		$this->iDisplayOrder = $aProduct["displayorder"];
 
 		$oDatabase->close();
 
+	}
+
+	public function save(){
+		$oDatabase = new Database();
+
+		$sSQL = "INSERT INTO tbproduct (producttypeid, price, stocklevel, photo, description, productname, active, sizing, displayorder)
+		VALUES ('".$oDatabase->escape_value($this->iProductTypeID)."',
+			'".$oDatabase->escape_value($this->fPrice)."',
+			'".$oDatabase->escape_value($this->iStockLevel)."',
+			'".$oDatabase->escape_value($this->sPhoto)."',
+			'".$oDatabase->escape_value($this->sDescription)."',
+			'".$oDatabase->escape_value($this->sProductName)."',
+			'".$oDatabase->escape_value($this->iActive)."',
+			'".$oDatabase->escape_value($this->sSizing)."',
+			'".$oDatabase->escape_value($this->iDisplayOrder)."',
+			)";
+
+		$bResult = $oDatabase->query($sSQL);
+		if($bResult == true){
+			$this->iProductID = $oDatabase->get_insert_id();
+		}else{
+			die($sSQL." has failed");
+		}
+		
+		$oDatabase->close();
 	}
 
 	public function __get($sProperty){
@@ -83,9 +105,6 @@ class Product{
 				break;
 			case "active":
 				return $this->iActive;
-				break;
-			case "colours":
-				return $this->sColours;
 				break;
 			case "sizing":
 				return $this->sSizing;

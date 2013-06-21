@@ -16,10 +16,6 @@ if(isset($_POST["submit"])){
 			$_SESSION['currentUser'] = $oTestCustomer->ID;
 			$oCart = new Cart();
 
-			$oCart->add(5,1);
-			$oCart->add(2,4);
-			$oCart->add(9,2);
-
 			$_SESSION['cart'] = $oCart;
 			// redirect
 			header("Location:mydetails.php");
